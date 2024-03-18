@@ -1,5 +1,6 @@
 ---
-import NavigationBar from '../components/NavigationBar.astro' 
+import NavigationBar from '../components/NavigationBar.astro'
+import Footer from '../components/Footer.astro' 
 const { title } = Astro.props;
 ---
 
@@ -15,7 +16,9 @@ const { title } = Astro.props;
 	</head>
 	<body>
        <NavigationBar/>
-		<slot />
+	   <slot />
+	   <Footer/>
+
 	</body>
 </html>
 <style is:global>
@@ -52,5 +55,13 @@ const { title } = Astro.props;
 		display: flex;
 		align-items: center;
 		justify-content: center;
+	}
+	body{
+		position: relative;
+		padding: 10px;
+		width: 100vw;
+		height: 100vh;
+		margin: 0;
+		box-sizing: border-box;
 	}
 </style>
