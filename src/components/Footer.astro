@@ -1,0 +1,24 @@
+---
+const platform = "github";
+const username = "withastro";
+import Social from './Social.astro';
+---
+
+<footer id="footer" class="fx-cont">
+  <p>
+    Learn more about my projects on 
+    <Social platform="facebook" username="faustoalejandro" />
+    <Social platform="github" username="faubertale" />
+    <Social platform="youtube" username="dafa" />
+  </p>
+  
+</footer>
+
+<style>
+    #footer {
+        position: absolute;
+        /* width: 80%; */
+        bottom: 0;
+        
+    }
+</style>
