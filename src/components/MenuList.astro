@@ -1,0 +1,31 @@
+---
+const { selected } = Astro.props;
+const pages = ['home', 'about', 'blog'];
+---
+<div class="menu-list fx-cont">
+    { pages.map((page)=>{
+        return (
+            <a 
+                href={page === 'home'?'/' : '/'+page} 
+                class={page === selected.toLowerCase() && 'active'}
+            >
+                {page.toUpperCase()}
+            </a>
+            )
+        })
+    }
+</div>
+
+<style>
+    .menu-list {
+        position: absolute;
+        top: 100%;
+        flex-direction: column;
+        a {
+            text-decoration: none;
+        }
+        .active {
+            color: green;
+        }
+    }
+</style>
