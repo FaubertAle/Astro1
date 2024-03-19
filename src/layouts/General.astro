@@ -1,6 +1,7 @@
 ---
 import NavigationBar from '../components/NavigationBar.astro'
 import Footer from '../components/Footer.astro' 
+import ToggleNav from '../components/ToggleNav.astro'
 const { title } = Astro.props;
 ---
 
@@ -15,12 +16,14 @@ const { title } = Astro.props;
 		<title>{title}</title>
 	</head>
 	<body>
-       <NavigationBar/>
-	   <slot />
-	   <Footer/>
+		<ToggleNav page={title}/>
+		<NavigationBar/>
+		<slot />
+		<Footer/>
 
 	</body>
 </html>
+
 <style is:global>
 	:root {
 		--accent: 136, 58, 234;

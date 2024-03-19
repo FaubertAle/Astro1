@@ -27,7 +27,7 @@
         fill="currentColor"></path>
     </svg>
   </div>
-  <nav class="fx-cont nav-links">
+  <nav class="nav-links">
     <a href="/">HOME</a>
     <a href="/about">ABOUT</a>
     <a href="/blog">BLOG</a>
@@ -44,7 +44,6 @@
     }
     nav {
       width: 90%;
-      border: solid 2px magenta;
       top: 5rem;
       left: 48px;
       background-color: #ff9776;
@@ -67,6 +66,10 @@
     background-color: #29b743;
   }
 
+  .expanded {
+    display: unset;
+  }
+
   @media screen and (min-width: 636px) {
     .nav-links {
       margin-left: 5em;
@@ -79,6 +82,10 @@
     .nav-links a {
       display: inline-block;
       padding: 15px 20px;
+    }
+    
+    .hamburger {
+    display: none;
     }
   }
 </style>
