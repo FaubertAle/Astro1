@@ -1,0 +1,78 @@
+---
+import MenuList from './MenuList.astro';
+const color = 'white';
+const { page } = Astro.props;
+---
+<div class="movile-nav fx-cont">
+  <div class="desp-menu fx-cont">
+    <div class="toggle active">
+    </div>
+  </div>
+  <div class="page fx-cont">
+    { page }
+    <MenuList selected={page}/>
+  </div>
+</div>
+
+
+<script>
+    document.querySelector('.desp-menu').addEventListener('click', () => {
+    document.querySelector('.toggle').classList.toggle('active');
+    });
+</script>
+
+<style define:vars={{color}}>
+  .movile-nav{
+    height: 6%;
+    gap: 10px;
+    position: relative;
+  }
+  .desp-menu {
+    height: 100%;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    border: solid 2px rgba(255, 255, 255, 0.25);
+    cursor: pointer;
+  }
+
+  .toggle {
+    position: relative;
+    width: 65%;
+    height: 8%;
+    border-radius: 20px;
+    background-color: var(--color);
+    transition: background-color .4s ease-in;
+    &::before, &::after {
+      position: absolute;
+      content: "";
+      width: 100%;
+      height: 100%;
+      border-radius: 0px 0px 20px 20px;
+      background-color: var(--color);
+      transform: translateY(12px);
+      transition: transform .4s ease-in;
+    }
+    &::before {
+      transform: scaleY(-1) translateY(12px); 
+    }
+  }
+
+  .toggle.active {
+    background-color: transparent;
+    &::before, &::after {
+      background-color: var(--color);
+      transform: translateY(0px) rotate(45deg);
+    }
+    &::before {
+      transform: scaleX(-1) rotate(45deg);
+    }
+  }
+
+  .page {
+    border: solid 2px rgba(255, 255, 255, 0.25);
+    padding: 8px;
+    border-radius: 8px;
+    width: 15%;
+    user-select: none;
+  }
+</style>
