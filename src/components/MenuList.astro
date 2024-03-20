@@ -2,7 +2,7 @@
 const { selected } = Astro.props;
 const pages = ['home', 'about', 'blog'];
 ---
-<div class="menu-list fx-cont">
+<div class="menu-list hide fx-cont">
     { pages.map((page)=>{
         return (
             <a 
@@ -28,4 +28,8 @@ const pages = ['home', 'about', 'blog'];
             color: green;
         }
     }
+    .hide {
+        display: none;
+    }
+
 </style>
