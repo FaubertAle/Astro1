@@ -1,0 +1,28 @@
+---
+import General from '../layouts/General.astro'
+const { frontmatter } = Astro.props;
+---
+
+<General title="Blog">
+	<div class="post">
+		<h1>{'Post #'+frontmatter.number}</h1>
+		<p>Escrito por {frontmatter.author}</p>
+		<slot/>
+		<div class="return fx-cont">
+			<a href="/blog"> &#8592; Post </a>
+		</div>
+	</div>
+</General>
+
+<style>
+	.return {
+		a {
+			background-color: greenyellow;
+			text-decoration: none;
+			padding: 4px;
+			color: black;
+			size: 2rem;
+			border-radius: 5px;
+		}
+	}
+</style>
