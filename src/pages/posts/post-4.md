@@ -1,5 +1,6 @@
 ---
 layout: ../../layouts/MDPostLayout.astro
+number: 4
 title: Mi cuarta entrada en el blog
 author: Alumno de Astro
 description: "Esta entrada aparecerá sola!"

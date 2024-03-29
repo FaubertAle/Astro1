@@ -3,7 +3,7 @@ import General from '../layouts/General.astro'
 const { frontmatter } = Astro.props;
 ---
 
-<General title="Blog">
+<General pageTitle={ 'Post #'+frontmatter.number } navPage ="Blog">
 	<div class="post">
 		<h1>{'Post #'+frontmatter.number}</h1>
 		<p>Escrito por {frontmatter.author}</p>

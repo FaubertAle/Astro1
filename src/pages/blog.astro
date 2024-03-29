@@ -4,7 +4,7 @@ import BlogsList from '../components/BlogsList.astro';
 const allPosts = await Astro.glob('./posts/*.md');
 ---
 
-<General title="Blog">
+<General pageTitle="Blog" navPage="Blog">
 	<h1>Sección Blog</h1>
     <p>A continuación una lista de blogs</p>
     <BlogsList blogsList={allPosts} />
