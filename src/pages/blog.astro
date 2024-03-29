@@ -1,6 +1,7 @@
 ---
 import General from '../layouts/General.astro';
 import BlogsList from '../components/BlogsList.astro';
+import TagList from '../components/TagList.astro';
 const allPosts = await Astro.glob('./posts/*.md');
 ---
 
@@ -8,5 +9,6 @@ const allPosts = await Astro.glob('./posts/*.md');
 	<h1>Sección Blog</h1>
     <p>A continuación una lista de blogs</p>
     <BlogsList blogsList={allPosts} />
+    <TagList/>
 </General>
 
