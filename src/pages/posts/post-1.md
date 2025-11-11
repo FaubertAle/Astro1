@@ -1,7 +1,7 @@
 ---
 layout: ../../layouts/MDPostLayout.astro
 number: 1
-title: 'My First Blog Post'
+title: 'My First Blog Post editada desde GitHub'
 pubDate: 2022-07-01
 description: 'This is the first post of my new Astro blog.'
 author: 'Astro Learner'
